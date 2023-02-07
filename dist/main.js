@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nconst Dom = (() => {\n\n    const loadPage = () => {\n        console.log(\"Hello\");\n    };\n    const loadProjects = () => {\n\n    };\n\n    const loadTodos = () => {\n\n    };\n\n    const loadHeader = () => {\n        \n    };\n    return {\n        loadPage,\n        loadProjects,\n        loadTodos\n    };\n\n})();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dom);\n\n//# sourceURL=webpack://todo/./src/modules/Dom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _TodoList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TodoList */ \"./src/modules/TodoList.js\");\n\n\n\nconst Dom = (() => {\n  const loadPage = () => {\n    loadProjects();\n    initMenu();\n  };\n  const loadProjects = () => {\n    const todoList = (0,_TodoList__WEBPACK_IMPORTED_MODULE_0__.TodoList)();\n  };\n\n  const loadTodos = () => {};\n\n  const initMenu = () => {\n    const menuBtn = document.querySelector(\".menu-btn\");\n    const menu = document.querySelector(\".menu\");\n    menuBtn.addEventListener(\"click\", () => {\n        if(menu.style.display === \"none\") {\n            menu.style.display = \"flex\";\n        } else {\n            menu.style.display = \"none\";\n        }\n    });\n  };\n\n  return {\n    loadPage,\n    loadProjects,\n    loadTodos,\n  };\n})();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dom);\n\n\n//# sourceURL=webpack://todo/./src/modules/Dom.js?");
+
+/***/ }),
+
+/***/ "./src/modules/TodoList.js":
+/*!*********************************!*\
+  !*** ./src/modules/TodoList.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"TodoList\": () => (/* binding */ TodoList)\n/* harmony export */ });\nconst TodoList = () => {\n  let projects = [];\n  const addProject = (project) => {\n    projects.push(project);\n  };\n\n  const getProjects = () => projects;\n\n  return { addProject, getProjects };\n};\n\n\n\n\n//# sourceURL=webpack://todo/./src/modules/TodoList.js?");
 
 /***/ })
 

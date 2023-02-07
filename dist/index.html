@@ -5,14 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
-        <h1>Header</h1>
+      <div class="nav">
+        <button class="menu-btn"><img src="./images/menu.svg" alt="Menu button" /></button>
+        <button><img src="./images/home.svg" alt="Home button" /></button>
+      </div>
+      <div class="interaction">
+        <button>
+          <img src="./images/plus.svg" alt="Add task button" />
+        </button>
+        <button><img src="./images/user.svg" alt="Profile button" /></button>
+      </div>
     </header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <main class="main">
+      <div class="menu">
+        <ul>
+          <li id="inbox">
+            <div class="menu-item">
+              <p>Inbox</p>
+            </div>
+            <div class="counter" id="inbox-counter">
+                1
+            </div>
+          </li>
+          <li id="today">
+            <div class="menu-item">
+              <p>Today</p>
+            </div>
+          </li>
+          <li id="upcoming">
+            <div class="menu-item">
+              <p>Upcoming</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
   </body>
-  
 </html>
