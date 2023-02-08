@@ -22,6 +22,7 @@ const Dom = (() => {
         menu.style.display = "none";
       }
     });
+
     const addBtn = document.querySelector(".add-btn");
     const addForm = document.querySelector(".task-add-menu");
     addBtn.addEventListener("click", () => {
@@ -29,6 +30,19 @@ const Dom = (() => {
         addForm.style.display = "flex";
       } else {
         addForm.style.display = "none";
+      }
+    });
+
+    const addProjectBtn = document.querySelector(".add-project-btn");
+    const addProjectForm = document.querySelector(".project-add-menu");
+    addProjectBtn.addEventListener("click", () => {
+      if (
+        addProjectForm.style.display === "none" ||
+        addProjectForm.style.display === ""
+      ) {
+        addProjectForm.style.display = "flex";
+      } else {
+        addProjectForm.style.display = "none";
       }
     });
   };

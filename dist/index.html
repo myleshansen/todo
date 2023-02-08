@@ -18,37 +18,89 @@
       </div>
       <div class="interaction">
         <button class="add-btn">
-          <img src="./images/plus.svg" alt="Add task button" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
         </button>
-        <button><img src="./images/user.svg" alt="Profile button" /></button>
+        <button class="profile-btn"><img src="./images/user.svg" alt="Profile button" /></button>
       </div>
     </header>
     <div class="task-add-menu">
       <div class="task-add-menu-header">
-        <p>Add Task</p>
+        <p>New Task</p>
         <button>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-x"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
       </div>
-      <div class="task-add-menu-content">
-        <div class="task-add-menu-content-header">
-          <div class="task-add-menu-content-header-title">
-            <p>Title</p>
-            <input type="text" />
+      <div class="task-form">
+        <form>
+          <div class="task-form-header">
+            <div class="task-form-header-left">
+              <input type="text" placeholder="Task name" />
+              <div class="task-form-header-left-bottom">
+                <div class="task-form-header-left-bottom-left">
+                  <input type="date" />
+                  <input type="time" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="task-add-menu-content-header-date">
-            <p>Date</p>
-            <input type="date" />
+          <div class="task-form-body">
+            <textarea placeholder="Task description"></textarea>
           </div>
-        </div>
-        <div class="task-add-menu-content-description">
-          <p>Description</p>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </div>
-        <div class="task-add-menu-content-footer">
-          <button>Cancel</button>
-          <button>Add</button>
-        </div>
+          <div class="task-form-footer">
+            <button class="add-task-btn">Add Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="project-add-menu">
+      <div class="project-add-menu-header">
+        <p>New Project</p>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-x"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="project-form">
+        <form>
+          <div class="project-form-header">
+            <div class="project-form-header-left">
+              <input type="text" placeholder="Project name" />
+            </div>
+          </div>
+          <div class="project-form-body">
+            <textarea placeholder="Project description"></textarea>
+          </div>
+          <div class="project-form-footer">
+            <button >Add Project</button>
+          </div>
+        </form>
       </div>
     </div>
     <main class="main">
@@ -77,7 +129,7 @@
           <div class="projects-header">
             <p>Projects</p>
             <div class="buttons">
-              <button>
+              <button class="add-project-btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
