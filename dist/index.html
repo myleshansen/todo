@@ -11,39 +11,110 @@
   <body>
     <header class="header">
       <div class="nav">
-        <button class="menu-btn"><img src="./images/menu.svg" alt="Menu button" /></button>
+        <button class="menu-btn">
+          <img src="./images/menu.svg" alt="Menu button" />
+        </button>
         <button><img src="./images/home.svg" alt="Home button" /></button>
       </div>
       <div class="interaction">
-        <button>
+        <button class="add-btn">
           <img src="./images/plus.svg" alt="Add task button" />
         </button>
         <button><img src="./images/user.svg" alt="Profile button" /></button>
       </div>
     </header>
+    <div class="task-add-menu">
+      <div class="task-add-menu-header">
+        <p>Add Task</p>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="task-add-menu-content">
+        <div class="task-add-menu-content-header">
+          <div class="task-add-menu-content-header-title">
+            <p>Title</p>
+            <input type="text" />
+          </div>
+          <div class="task-add-menu-content-header-date">
+            <p>Date</p>
+            <input type="date" />
+          </div>
+        </div>
+        <div class="task-add-menu-content-description">
+          <p>Description</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="task-add-menu-content-footer">
+          <button>Cancel</button>
+          <button>Add</button>
+        </div>
+      </div>
+    </div>
     <main class="main">
       <div class="menu">
-        <ul>
-          <li id="inbox">
-            <div class="menu-item">
-              <p>Inbox</p>
+        <div class="tasks">
+          <ul>
+            <li id="inbox">
+              <div class="menu-item">
+                <p>Inbox</p>
+              </div>
+              <div class="counter" id="inbox-counter">1</div>
+            </li>
+            <li id="today">
+              <div class="menu-item">
+                <p>Today</p>
+              </div>
+            </li>
+            <li id="upcoming">
+              <div class="menu-item">
+                <p>Upcoming</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="projects">
+          <div class="projects-header">
+            <p>Projects</p>
+            <div class="buttons">
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-plus"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-chevron-down"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
             </div>
-            <div class="counter" id="inbox-counter">
-                1
-            </div>
-          </li>
-          <li id="today">
-            <div class="menu-item">
-              <p>Today</p>
-            </div>
-          </li>
-          <li id="upcoming">
-            <div class="menu-item">
-              <p>Upcoming</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
+      <div class="main-content"></div>
     </main>
   </body>
 </html>
