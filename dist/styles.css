@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--gray);
-  height: 100vh;
+  height: calc(100vh - 44px);
 }
 
 .menu ul {
