@@ -59,7 +59,7 @@ const Dom = (() => {
     const projectFormData = new FormData(
       document.querySelector(".project-form-data")
     );
-    console.log(projectFormData);
+    const projectTitle = projectFormData.get("project-title");
     // const projectList = document.querySelector(".project-list");
     // const projectItem = document.createElement("div");
     // projectItem.classList.add("project-item");
