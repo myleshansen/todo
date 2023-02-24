@@ -4,169 +4,191 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="nav">
-        <button class="menu-btn">
-          <img src="./images/menu.svg" alt="Menu button" />
-        </button>
-        <button><img src="./images/home.svg" alt="Home button" /></button>
-      </div>
-      <div class="interaction">
-        <button class="add-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-        </button>
-        <button class="profile-btn"><img src="./images/user.svg" alt="Profile button" /></button>
-      </div>
-    </header>
-    <div class="task-add-menu">
-      <div class="task-add-menu-header">
-        <p>New Task</p>
-        <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-x"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <div class="task-form">
-        <form>
-          <div class="task-form-header">
-            <div class="task-form-header-left">
-              <input type="text" placeholder="Task name" />
-              <div class="task-form-header-left-bottom">
-                <div class="task-form-header-left-bottom-left">
-                  <input type="date" />
-                  <input type="time" />
+    <div class="hidden" hidden>
+      <header class="header">
+        <div class="nav">
+          <button class="menu-btn">
+            <img src="./images/menu.svg" alt="Menu button" />
+          </button>
+          <button><img src="./images/home.svg" alt="Home button" /></button>
+        </div>
+        <div class="interaction">
+          <button class="add-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-plus"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <button class="profile-btn">
+            <img src="./images/user.svg" alt="Profile button" />
+          </button>
+        </div>
+      </header>
+      <div class="task-add-menu">
+        <div class="task-add-menu-header">
+          <p>New Task</p>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="task-form">
+          <form>
+            <div class="task-form-header">
+              <div class="task-form-header-left">
+                <input type="text" placeholder="Task name" />
+                <div class="task-form-header-left-bottom">
+                  <div class="task-form-header-left-bottom-left">
+                    <input type="date" />
+                    <input type="time" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="task-form-body">
-            <textarea placeholder="Task description"></textarea>
-          </div>
-          <div class="task-form-footer">
-            <button class="add-task-btn">Add Task</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="project-add-menu">
-      <div class="project-add-menu-header">
-        <p>New Project</p>
-        <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-x"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <div class="project-form">
-        <form class="project-form-data">
-          <div class="project-form-header">
-            <div class="project-form-header-left">
-              <input type="text" placeholder="Project name" id="project-title"/>
+            <div class="task-form-body">
+              <textarea placeholder="Task description"></textarea>
             </div>
-          </div>
-          <div class="project-form-body">
-            <textarea placeholder="Project description"></textarea>
-          </div>
-          <div class="project-form-footer">
-            <button class="project-submit-btn"s>Add Project</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <main class="main">
-      <div class="menu">
-        <div class="tasks">
-          <ul>
-            <li id="inbox">
-              <div class="menu-item">
-                <p>Inbox</p>
-              </div>
-              <div class="counter" id="inbox-counter">1</div>
-            </li>
-            <li id="today">
-              <div class="menu-item">
-                <p>Today</p>
-              </div>
-            </li>
-            <li id="upcoming">
-              <div class="menu-item">
-                <p>Upcoming</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="projects">
-          <div class="projects-header">
-            <p>Projects</p>
-            <div class="buttons">
-              <button class="add-project-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-plus"
-                >
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </button>
-              <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-chevron-down"
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
+            <div class="task-form-footer">
+              <button class="add-task-btn">Add Task</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-      <div class="main-content"></div>
-    </main>
+      <div class="project-add-menu">
+        <div class="project-add-menu-header">
+          <p>New Project</p>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="project-form">
+          <form class="project-form-data">
+            <div class="project-form-header">
+              <div class="project-form-header-left">
+                <input
+                  type="text"
+                  placeholder="Project name"
+                  id="project-title"
+                />
+              </div>
+            </div>
+            <div class="project-form-body">
+              <textarea placeholder="Project description"></textarea>
+            </div>
+            <div class="project-form-footer">
+              <button class="project-submit-btn" s>Add Project</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <main class="main">
+        <div class="menu">
+          <div class="tasks">
+            <ul>
+              <li id="inbox">
+                <div class="menu-item">
+                  <p>Inbox</p>
+                </div>
+                <div class="counter" id="inbox-counter">1</div>
+              </li>
+              <li id="today">
+                <div class="menu-item">
+                  <p>Today</p>
+                </div>
+              </li>
+              <li id="upcoming">
+                <div class="menu-item">
+                  <p>Upcoming</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="projects">
+            <div class="projects-header">
+              <p>Projects</p>
+              <div class="buttons">
+                <button class="add-project-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-plus"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-down"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-content"></div>
+      </main>
+    </div>
   </body>
+  <script src="main.js"></script>
 </html>

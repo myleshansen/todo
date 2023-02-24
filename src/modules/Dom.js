@@ -61,7 +61,7 @@ const Dom = (() => {
     );
     const projectTitle = projectFormData.get("project-title");
     // const projectList = document.querySelector(".project-list");
-    // const projectItem = document.createElement("div");
+    // const proj3ectItem = document.createElement("div");
     // projectItem.classList.add("project-item");
     // projectItem.setAttribute("data-project", project.title);
     // projectItem.textContent = project.title;
